@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Description</key>
+	<string>Downloads the latest AdoptOpenJDK 14 for macOS.</string>
+	<key>Identifier</key>
+	<string>com.github.wartz-reciepes.download.AdoptAdoptOpenJDK14</string>
+	<key>Input</key>
+	<dict>
+		<key>NAME</key>
+		<string>AdoptOpenJDK 14</string>
+		<key>MAJOR_VERSION</key>
+		<string>14</string>
+		<key>VENDOR</key>
+		<string>AdoptOpenJDK</string>
+		<key>SOFTWARETITLE</key>
+		<string>Java</string>
+		<key>SOFTWARETYPE</key>
+		<string>JDK</string>
+		<key>SEARCH_URL</key>
+		<string>https://api.adoptopenjdk.net/v3/assets/version/%5B14.0%2C%29?architecture=x64&amp;heap_size=normal&amp;image_type=jdk&amp;jvm_impl=hotspot&amp;lts=false&amp;os=mac&amp;page=0&amp;page_size=20&amp;project=jdk&amp;release_type=ga&amp;sort_order=DESC&amp;vendor=adoptopenjdk</string>
+	</dict>
+	<key>MinimumVersion</key>
+	<string>1.0.0</string>
+	<key>Process</key>
+	<array>
+		<dict>
+			<key>Processor</key>
+			<string>URLDownloader</string>
+			<key>Arguments</key>
+			<dict>
+				<key>url</key>
+				<string>%url%</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>Processor</key>
+			<string>EndOfCheckPhase</string>
+		</dict>
+	</array>
+</dict>
+</plist>
